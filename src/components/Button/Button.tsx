@@ -79,6 +79,7 @@ const Container = styled.button<{ size: string; isRegular: boolean }>`
       props.isRegular &&
       css`
         font-weight: 400;
+        font-family: Poppins;
       `}
   }
 `;

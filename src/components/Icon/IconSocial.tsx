@@ -41,6 +41,7 @@ const Container = styled.article<{ name: string }>`
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  cursor: pointer;
 
   ${(props) =>
     props.name === "facebook" &&
