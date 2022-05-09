@@ -1,24 +1,21 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Button } from "../components/Button/Button";
+import { Story, Meta } from "@storybook/react";
+import { Button, ButtonProps } from "../components/Button/Button";
 
 export default {
   title: "COMPONENTS/Button",
   component: Button,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
-} as ComponentMeta<typeof Button>;
+} as Meta;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
-export const Medium = Template.bind({});
-Medium.args = {
-  size: "Medium",
+export const medium = Template.bind({});
+medium.args = {
+  size: "medium",
   label: "저장하기",
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: "Large",
+export const large = Template.bind({});
+large.args = {
+  size: "large",
   label: "취향 카드 만들기",
 };
