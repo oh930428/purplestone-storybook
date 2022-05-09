@@ -1,48 +1,73 @@
-import React from 'react';
-import './button.css';
+import styled, { css } from "styled-components";
+import fonts from "../../styles/font";
 
 interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
+  size: "Medium" | "Large";
   label: string;
-  /**
-   * Optional click handler
-   */
   onClick?: () => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button = ({ size = "Medium", label }: ButtonProps) => {
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
+    <Container type="button" size={size}>
+      <span className="button-text">{label}</span>
+    </Container>
   );
 };
+
+const Container = styled.button<{ size: string }>`
+  position: relative;
+  border-radius: 6px;
+  background: 0;
+  outline: 0;
+
+  ${(props) =>
+    props.size === "Medium"
+      ? css`
+          width: 180px;
+          height: 60px;
+          border: 1px solid #212121;
+        `
+      : css`
+          width: 244px;
+          height: 85px;
+          border: 1px solid #4f4f4f;
+        `}
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: translate(10px, 10px);
+    border-radius: 6px;
+    background: #f5ee84;
+    z-index: -1;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover::after {
+    transform: translate(0, 0);
+  }
+
+  .button-text {
+    color: #5a2b81;
+
+    ${(props) =>
+      props.size === "Medium"
+        ? css`
+            ${fonts.Headline4}
+          `
+        : css`
+            font-family: "Noto Sans";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 33px;
+            letter-spacing: -0.01em;
+            color: #474306;
+          `}
+  }
+`;
