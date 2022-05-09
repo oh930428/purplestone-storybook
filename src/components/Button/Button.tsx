@@ -1,28 +1,33 @@
 import styled, { css } from "styled-components";
 import fonts from "../../styles/font";
 
-interface ButtonProps {
-  size: "Medium" | "Large";
+export interface ButtonProps {
+  size: "medium" | "large";
+  isRegular?: true | false;
   label: string;
   onClick?: () => void;
 }
 
-export const Button = ({ size = "Medium", label }: ButtonProps) => {
+export const Button = ({
+  size = "medium",
+  label,
+  isRegular = false,
+}: ButtonProps) => {
   return (
-    <Container type="button" size={size}>
+    <Container type="button" size={size} isRegular={isRegular}>
       <span className="button-text">{label}</span>
     </Container>
   );
 };
 
-const Container = styled.button<{ size: string }>`
+const Container = styled.button<{ size: string; isRegular: boolean }>`
   position: relative;
   border-radius: 6px;
   background: 0;
   outline: 0;
 
   ${(props) =>
-    props.size === "Medium"
+    props.size === "medium"
       ? css`
           width: 180px;
           height: 60px;
@@ -56,7 +61,7 @@ const Container = styled.button<{ size: string }>`
     color: #5a2b81;
 
     ${(props) =>
-      props.size === "Medium"
+      props.size === "medium"
         ? css`
             ${fonts.Headline4}
           `
@@ -69,5 +74,11 @@ const Container = styled.button<{ size: string }>`
             letter-spacing: -0.01em;
             color: #474306;
           `}
+
+    ${(props) =>
+      props.isRegular &&
+      css`
+        font-weight: 400;
+      `}
   }
 `;
