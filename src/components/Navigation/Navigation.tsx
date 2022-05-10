@@ -8,7 +8,7 @@ const Navigation = () => {
         <a href="/">PurpleStone</a>
       </Logo>
 
-      <Nav>
+      <Gnb>
         <li>
           <a href="/">Home</a>
         </li>
@@ -20,14 +20,14 @@ const Navigation = () => {
             <Button size="medium" label="Create My Card" isRegular></Button>
           </a>
         </li>
-      </Nav>
+      </Gnb>
     </Container>
   );
 };
 
 export default Navigation;
 
-const Container = styled.header`
+const Container = styled.nav`
   width: 100%;
   height: 100%;
   max-width: 1200px;
@@ -52,12 +52,11 @@ const Logo = styled.h1`
   color: #5a2b81;
 `;
 
-const Nav = styled.nav`
+const Gnb = styled.ul`
   list-style: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 400px;
+  gap: 60px;
 
   li {
     font-family: Poppins;
