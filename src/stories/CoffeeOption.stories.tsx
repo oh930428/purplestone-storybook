@@ -19,7 +19,7 @@ Default.args = {
     brandIcon: require("../assets/Icons/brand.png"),
     beanIcon: require("../assets/Icons/beans.png"),
     cupIcon: require("../assets/Icons/coffee.png"),
-    syrupIcon: require("../assets/Icons/syrup.png"),
+    syrupIcon: require("../assets/Icons/bluecuracaoSyrup-small.png"),
     dayTimeIcon: require("../assets/Icons/morning-big.png"),
     temperatureIcon: require("../assets/Icons/ice-big.png"),
   },
