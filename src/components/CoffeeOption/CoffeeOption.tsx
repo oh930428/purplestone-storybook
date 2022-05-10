@@ -70,11 +70,6 @@ const Container = styled.div<{ bgCircle: string; bgCircleActive: string }>`
     right: 2.5px;
   }
 
-  .syrup-image {
-    width: 70px;
-    height: 70px;
-  }
-
   &:hover {
     background-image: ${(props) => `url(${props.bgCircleActive})`};
   }
