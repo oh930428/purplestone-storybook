@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Button } from "../Button/Button";
+import styled from 'styled-components';
+import { Button } from '../Button/Button';
 
 const Navigation = () => {
   return (
@@ -17,7 +17,12 @@ const Navigation = () => {
         </li>
         <li className="nav-button-item">
           <a href="/mycard">
-            <Button size="medium" label="Create My Card" isRegular></Button>
+            <Button
+              size="medium"
+              theme="primary"
+              label="Create My Card"
+              isRegular
+            ></Button>
           </a>
         </li>
       </Gnb>
