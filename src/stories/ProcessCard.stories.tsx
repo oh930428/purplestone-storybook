@@ -6,7 +6,7 @@ import {
 } from '../components/Card/ProcessCard/ProcessCard';
 
 export default {
-  title: 'Components/ProcessCard',
+  title: 'Components/Card/ProcessCard',
   component: ProcessCard,
 } as Meta;
 

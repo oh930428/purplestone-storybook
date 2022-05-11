@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 import { Colors, ColorsProps } from '../components/Colors/Colors';
 
 export default {
-  title: 'Components/Colors',
+  title: 'Design Systems/Colors',
   component: Colors,
 } as Meta;
 

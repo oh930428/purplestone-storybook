@@ -49,6 +49,12 @@ const Container = styled.div`
     justify-content: center;
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 12px 8px;
+    padding: 9px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 `;

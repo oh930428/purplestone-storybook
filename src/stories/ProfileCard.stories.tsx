@@ -5,7 +5,7 @@ import {
 } from '../components/Card/ProfileCard/ProfileCard';
 
 export default {
-  title: 'COMPONENTS/ProfileCard',
+  title: 'Components/Card/ProfileCard',
   component: ProfileCard,
 } as Meta;
 

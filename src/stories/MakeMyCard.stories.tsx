@@ -3,7 +3,7 @@ import MakeMyCard from '../components/Card/MakeMyCard/MakeMyCard';
 import { IMakeMyCard } from '../types/makeMyCard.type';
 
 export default {
-  title: 'Components/MakeMyCard',
+  title: 'Components/Card/MakeMyCard',
   component: MakeMyCard,
 } as Meta;
 
