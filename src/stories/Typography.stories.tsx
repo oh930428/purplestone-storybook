@@ -1,8 +1,8 @@
-import { Story, Meta } from "@storybook/react";
-import Typography from "../components/Typography/Typography";
+import { Story, Meta } from '@storybook/react';
+import Typography from '../components/Typography/Typography';
 
 export default {
-  title: "Design Systems/Typography",
+  title: 'Design System/Typography',
   component: Typography,
 } as Meta;
 
