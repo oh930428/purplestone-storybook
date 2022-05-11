@@ -1,8 +1,8 @@
-import { Story, Meta } from "@storybook/react";
-import Font from "../components/Font/Font";
+import { Story, Meta } from '@storybook/react';
+import Font from '../components/Font/Font';
 
 export default {
-  title: "Example/Font",
+  title: 'Design Systems/Font',
   component: Font,
 } as Meta;
 
