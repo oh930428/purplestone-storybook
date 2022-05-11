@@ -6,7 +6,7 @@ import {
 } from '../components/Card/MakeMyCardSmall/MakeMyCardSmall';
 
 export default {
-  title: 'Components/MakeMyCardSmall',
+  title: 'Components/Card/MakeMyCardSmall',
   component: MakeMyCardSmall,
 } as Meta;
 

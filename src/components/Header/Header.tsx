@@ -8,7 +8,7 @@ export interface HeaderProps {
   textAlign?: string;
 }
 
-export const HeaderSection = ({ title, subTitle, textAlign }: HeaderProps) => {
+export const Header = ({ title, subTitle, textAlign }: HeaderProps) => {
   return (
     <Container textAlign={textAlign}>
       <div className="title">
