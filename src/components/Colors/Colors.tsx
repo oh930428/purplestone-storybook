@@ -12,10 +12,6 @@ export interface ColorsProps {
 export const Colors = ({ title, subTitle, colorCardList }: ColorsProps) => {
   return (
     <Container>
-      <div className="header">
-        <h1>Color System</h1>
-      </div>
-      <hr />
       <div className="main">
         <div className="main-title">
           <div className="title">{title}</div>
@@ -38,19 +34,6 @@ export const Colors = ({ title, subTitle, colorCardList }: ColorsProps) => {
 };
 
 const Container = styled.div`
-  .header {
-    margin: 2rem;
-    h1 {
-      margin: 0px;
-      font-size: 72px;
-      line-height: 98px;
-      letter-spacing: -0.01em;
-    }
-  }
-  hr {
-    margin: 1rem;
-    opacity: 0.2;
-  }
   .main {
     display: flex;
     flex-flow: column;
@@ -75,6 +58,7 @@ const Container = styled.div`
 
     .main-section {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
     }
   }

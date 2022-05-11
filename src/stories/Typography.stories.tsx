@@ -1,13 +1,13 @@
 import { Story, Meta } from '@storybook/react';
-import Font from '../components/Font/Font';
+import Typography from '../components/Typography/Typography';
 
 export default {
-  title: 'Design Systems/Font',
-  component: Font,
+  title: 'Design System/Typography',
+  component: Typography,
 } as Meta;
 
 const Template: Story = (args) => {
-  return <Font {...args} />;
+  return <Typography {...args} />;
 };
 
 export const Default = Template.bind({});
