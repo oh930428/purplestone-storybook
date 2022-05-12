@@ -4,16 +4,16 @@ import styled from 'styled-components';
 export interface TasteIconProps {
   brandIcon: string;
   beanIcon: string;
-  syrupIcon: string;
-  dayTimeIcon: string;
+  coffeeTypeIcon: string;
+  bottleIcon: string;
   temperatureIcon: string;
 }
 
 export const Icons = ({
   brandIcon,
   beanIcon,
-  syrupIcon,
-  dayTimeIcon,
+  coffeeTypeIcon,
+  bottleIcon,
   temperatureIcon,
 }: TasteIconProps) => {
   return (
@@ -25,10 +25,10 @@ export const Icons = ({
         <img src={beanIcon} alt="Bean Icon" />
       </div>
       <div className="icon">
-        <img src={syrupIcon} alt="Syrup Icon" />
+        <img src={coffeeTypeIcon} alt="Syrup Icon" />
       </div>
       <div className="icon">
-        <img src={dayTimeIcon} alt="DayTime Icon" />
+        <img src={bottleIcon} alt="DayTime Icon" />
       </div>
       <div className="icon">
         <img src={temperatureIcon} alt="Temperature Icon" />
@@ -49,7 +49,7 @@ const Container = styled.div`
     justify-content: center;
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 9px;
+    padding: 5px;
 
     img {
       width: 100%;

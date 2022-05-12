@@ -14,21 +14,21 @@ Default.args = {
   brand: {
     name: 'Coffee Bean',
     description: '커피빈 브랜드가 좋아요',
-    thumbnail: require('../assets/images/coffee.png'),
+    thumbnail: require('../assets/Icons/brands/coffeebean.png'),
   },
   temperature: {
     name: '얼.죽.아',
     description: '겨울에도 차가운 아이스 커피 못 잃어',
-    thumbnail: require('../assets/Icons/ice.png'),
+    thumbnail: require('../assets/Icons/temperature/ice.png'),
   },
   beans: {
     name: '예가체프 AA',
     description: '적절한 산미가 깔끔한 맛의 예가체프가 AA가 내 취향~',
   },
-  time: {
-    name: '모닝 커피',
-    description: '아침을 깨우는 커피 한잔의 행복',
-    thumbnail: require('../assets/Icons/morning.png'),
+  coffeeType: {
+    name: '아메리카노',
+    description: '난 아메리카노 중독자 입니다',
+    thumbnail: require('../assets/Icons/temperature/hot.png'),
   },
   syrup: {
     name: 'No 시럽',

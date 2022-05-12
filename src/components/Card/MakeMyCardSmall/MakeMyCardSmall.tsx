@@ -13,8 +13,8 @@ export interface MakeMyCardSmallProps {
 export interface TasteDigramProps {
   brandName: string;
   beanName: string;
-  isSyrup: string;
-  daytime: string;
+  coffeeTypeName: string;
+  bottleName: string;
   temperature: string;
 }
 
@@ -36,8 +36,8 @@ export const MakeMyCardSmall = ({
             <Icons
               brandIcon={tasteIcon.brandIcon}
               beanIcon={tasteIcon.beanIcon}
-              syrupIcon={tasteIcon.syrupIcon}
-              dayTimeIcon={tasteIcon.dayTimeIcon}
+              coffeeTypeIcon={tasteIcon.coffeeTypeIcon}
+              bottleIcon={tasteIcon.bottleIcon}
               temperatureIcon={tasteIcon.temperatureIcon}
             />
           </div>
@@ -46,8 +46,8 @@ export const MakeMyCardSmall = ({
           <ul>
             <li className="brand">{tasteDigram.brandName}</li>
             <li className="bean">{tasteDigram.beanName}</li>
-            <li className="syrup">{tasteDigram.isSyrup}</li>
-            <li className="daytime">{tasteDigram.daytime}</li>
+            <li className="coffeetype">{tasteDigram.coffeeTypeName}</li>
+            <li className="bottle">{tasteDigram.bottleName}</li>
             <li className="temperature">{tasteDigram.temperature}</li>
           </ul>
           <div className="main-section">
@@ -68,14 +68,14 @@ const Container = styled.div<{ bgCard: string }>`
   background-size: cover;
   border-radius: 20px;
   box-sizing: border-box;
-  padding: 23px 23px 34px;
+  padding: 23px 23px 8px;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
 `;
 
 const Card = styled.div`
   display: flex;
-  gap: 41px;
   flex-flow: column;
+  gap: 10px;
 
   .header {
     display: flex;
@@ -108,6 +108,7 @@ const Card = styled.div`
       height: 100%;
       margin: 0;
       padding: 0;
+
       li {
         display: flex;
         align-items: center;
@@ -129,11 +130,11 @@ const Card = styled.div`
         top: 33%;
         right: -1%;
       }
-      .syrup {
+      .bottle {
         bottom: 8%;
         right: 8%;
       }
-      .daytime {
+      .coffeetype {
         bottom: 8%;
         left: 13%;
       }
