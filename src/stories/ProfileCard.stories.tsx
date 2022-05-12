@@ -15,7 +15,7 @@ export const Default = Template.bind({});
 Default.args = {
   userName: 'KIM BORA',
   descrition: '프론트엔드 담당<br/> 에어자이저 <br/> 아이디어 뱅크',
-  thumbnail: require('../assets/Icons/profile.png'),
+  thumbnail: require('../assets/Images/profile.png'),
   iconSocials: [
     {
       name: 'facebook',

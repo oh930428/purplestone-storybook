@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export interface IconSocialProps {
   name: string;
@@ -7,24 +7,24 @@ export interface IconSocialProps {
 export const IconSocial = ({ name }: IconSocialProps) => {
   return (
     <Container name={name}>
-      {name === "facebook" && (
+      {name === 'facebook' && (
         <img
           className="icon-image"
-          src={require("../../assets/Icons/facebook.png")}
+          src={require('../../assets/Icons/socials/facebook.png')}
           alt={name}
         />
       )}
-      {name === "google" && (
+      {name === 'google' && (
         <img
           className="icon-image"
-          src={require("../../assets/Icons/google.png")}
+          src={require('../../assets/Icons/socials/google.png')}
           alt={name}
         />
       )}
-      {name === "instagram" && (
+      {name === 'instagram' && (
         <img
           className="icon-image"
-          src={require("../../assets/Icons/instagram.png")}
+          src={require('../../assets/Icons/socials/instagram.png')}
           alt={name}
         />
       )}
@@ -44,19 +44,19 @@ const Container = styled.article<{ name: string }>`
   cursor: pointer;
 
   ${(props) =>
-    props.name === "facebook" &&
+    props.name === 'facebook' &&
     css`
       background-color: #3182ce; ;
     `}
 
   ${(props) =>
-    props.name === "google" &&
+    props.name === 'google' &&
     css`
       background-color: #e53e3e;
     `}
 
     ${(props) =>
-    props.name === "instagram" &&
+    props.name === 'instagram' &&
     css`
       background-color: #2d3748;
     `}

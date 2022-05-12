@@ -19,22 +19,32 @@ BrandsTypes.args = {
     {
       id: 1,
       name: 'EDIYA COFFEE',
-      thumbnail: require('../assets/Icons/ediya.png'),
+      thumbnail: require('../assets/Icons/brands/ediya.png'),
     },
     {
       id: 2,
       name: 'STARBUCKS',
-      thumbnail: require('../assets/Icons/starbucks.png'),
+      thumbnail: require('../assets/Icons/brands/starbucks.png'),
     },
     {
       id: 3,
       name: 'COFFEE BEEN',
-      thumbnail: require('../assets/Icons/coffeebean.png'),
+      thumbnail: require('../assets/Icons/brands/coffeebean.png'),
     },
     {
       id: 4,
       name: 'TWOSOME PLACE',
-      thumbnail: require('../assets/Icons/twosome.png'),
+      thumbnail: require('../assets/Icons/brands/twosome.png'),
+    },
+    {
+      id: 5,
+      name: 'HOLLYS COFFEE',
+      thumbnail: require('../assets/Icons/brands/hollys.png'),
+    },
+    {
+      id: 6,
+      name: 'PASCUCCI COFFEE',
+      thumbnail: require('../assets/Icons/brands/pascucci.png'),
     },
   ],
 };
@@ -46,32 +56,32 @@ BeansTypes.args = {
     {
       id: 1,
       name: '콜롬비아 수프리모',
-      thumbnail: require('../assets/Icons/colombiaSupremo.png'),
+      thumbnail: require('../assets/Icons/beans/colombiaSupremo.png'),
     },
     {
       id: 2,
-      name: '유기농 콜롬비아',
-      thumbnail: require('../assets/Icons/colombiaDecaffein.png'),
+      name: '에티오피아 예가체프',
+      thumbnail: require('../assets/Icons/beans/ethiopiaYirgacheffee.png'),
     },
     {
       id: 3,
-      name: '콜롬비아 디카페인',
-      thumbnail: require('../assets/Icons/colombiaOrganic.png'),
+      name: '과테말라 SHB',
+      thumbnail: require('../assets/Icons/beans/guatemalaAntiguaSHB.png'),
     },
     {
       id: 4,
-      name: '멕시코 알투라',
-      thumbnail: require('../assets/Icons/mexicoAlturaOrganic.png'),
+      name: '케냐 AA',
+      thumbnail: require('../assets/Icons/beans/kenyaAA.png'),
     },
     {
       id: 5,
-      name: '브라질 산토스',
-      thumbnail: require('../assets/Icons/brazilSantos.png'),
+      name: '탄자니아 AA',
+      thumbnail: require('../assets/Icons/beans/tanzaniaAA.png'),
     },
     {
       id: 6,
-      name: '콰테말라SHB',
-      thumbnail: require('../assets/Icons/guatemalaSHB.png'),
+      name: '자메이카 블루마운틴',
+      thumbnail: require('../assets/Icons/beans/jamaicaBlueMountain.png'),
     },
   ],
 };
@@ -82,75 +92,24 @@ TemperatureTypes.args = {
   tasteType: [
     {
       id: 1,
-      name: '뜨겁게',
-      thumbnail: require('../assets/Icons/hot.png'),
+      name: '쪄.죽.따',
+      thumbnail: require('../assets/Icons/temperature/hot.png'),
     },
     {
       id: 2,
-      name: '얼음 적게',
-      thumbnail: require('../assets/Icons/lessIce.png'),
+      name: '반.반',
+      thumbnail: require('../assets/Icons/temperature/half.png'),
     },
     {
       id: 3,
-      name: '얼음',
-      thumbnail: require('../assets/Icons/ice.png'),
-    },
-    {
-      id: 4,
-      name: '얼음 많이',
-      thumbnail: require('../assets/Icons/manyIce.png'),
+      name: '얼.죽.아',
+      thumbnail: require('../assets/Icons/temperature/ice.png'),
     },
   ],
 };
 
-export const SyrupTypes = Template.bind({});
-SyrupTypes.args = {
-  title: '달달한 정도를 선택하세요',
-  tasteType: [
-    {
-      id: 1,
-      name: '카라멜 시럽',
-      thumbnail: require('../assets/Icons/caramelSyrup.png'),
-    },
-    {
-      id: 2,
-      name: '헤이즐넛 시럽',
-      thumbnail: require('../assets/Icons/hazelnutSyrup.png'),
-    },
-    {
-      id: 3,
-      name: '블루 큐라소 시럽',
-      thumbnail: require('../assets/Icons/bluecuracaoSyrup.png'),
-    },
-    {
-      id: 4,
-      name: '바닐라 시럽',
-      thumbnail: require('../assets/Icons/vainillaSyrup.png'),
-    },
-  ],
-};
-
-export const DayTimeTypes = Template.bind({});
-DayTimeTypes.args = {
-  title: '커피를 언제 드시나요?',
-  tasteType: [
-    {
-      id: 1,
-      name: '아침',
-      thumbnail: require('../assets/Icons/morning.png'),
-    },
-    {
-      id: 2,
-      name: '점심',
-      thumbnail: require('../assets/Icons/lunch.png'),
-    },
-    {
-      id: 3,
-      name: '저녁',
-      thumbnail: require('../assets/Icons/evening.png'),
-    },
-  ],
-};
+export const CoffeeTypes = Template.bind({});
+CoffeeTypes.args = {};
 
 export const BottleTypes = Template.bind({});
 BottleTypes.args = {
@@ -158,18 +117,33 @@ BottleTypes.args = {
   tasteType: [
     {
       id: 1,
-      name: '머그 컵',
-      thumbnail: require('../assets/Icons/mugCup.png'),
+      name: '텀블러',
+      thumbnail: require('../assets/Icons/bottles/cup-black.png'),
     },
     {
       id: 2,
-      name: '리유저블 컵',
-      thumbnail: require('../assets/Icons/reuseableCup.png'),
+      name: '테이크 아웃(뜨)',
+      thumbnail: require('../assets/Icons/bottles/cup-brown.png'),
     },
     {
       id: 3,
-      name: '일회용 컵',
-      thumbnail: require('../assets/Icons/disposableCup.png'),
+      name: '테이크 아웃(아)',
+      thumbnail: require('../assets/Icons/bottles/cup-disposable.png'),
+    },
+    {
+      id: 4,
+      name: '머그 컵',
+      thumbnail: require('../assets/Icons/bottles/cup-glass.png'),
+    },
+    {
+      id: 5,
+      name: '재사용 컵',
+      thumbnail: require('../assets/Icons/bottles/cup-reuseable.png'),
+    },
+    {
+      id: 6,
+      name: '찻 잔',
+      thumbnail: require('../assets/Icons/bottles/cup-yellow.png'),
     },
   ],
 };

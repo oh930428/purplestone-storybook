@@ -2,7 +2,7 @@ export interface IMakeMyCard {
   brand: IContents;
   temperature: IContents;
   beans: IContents;
-  time: IContents;
+  coffeeType: IContents;
   syrup: IContents;
 }
 

@@ -16,21 +16,21 @@ const Template: Story<MakeMyCardSmallProps> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  bgCard: require('../assets/images/bg-card-small.png'),
-  bgDigram: require('../assets/images/bg-digram-small.png'),
+  bgCard: require('../assets/Images/bg-card-small.png'),
+  bgDigram: require('../assets/Images/bg-digram-small.png'),
   userName: '은평구 코알라',
   tasteIcon: {
-    brandIcon: require('../assets/Icons/morning.png'),
-    beanIcon: require('../assets/Icons/morning.png'),
-    syrupIcon: require('../assets/Icons/morning.png'),
-    dayTimeIcon: require('../assets/Icons/morning.png'),
-    temperatureIcon: require('../assets/Icons/ice.png'),
+    brandIcon: require('../assets/Icons/brands/coffeebean.png'),
+    beanIcon: require('../assets/Icons/beans/kenyaAA.png'),
+    bottleIcon: require('../assets/Icons/bottles/cup-black.png'),
+    coffeeTypeIcon: require('../assets/Icons/temperature/hot.png'),
+    temperatureIcon: require('../assets/Icons/temperature/ice.png'),
   },
   tasteDigram: {
     brandName: 'Coffee Bean',
     beanName: '예가체프 AA',
-    isSyrup: 'No 시럽',
-    daytime: '모닝 커피',
+    bottleName: 'No 시럽',
+    coffeeTypeName: '모닝 커피',
     temperature: '얼.죽.아',
   },
 };

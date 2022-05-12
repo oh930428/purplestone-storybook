@@ -1,8 +1,8 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Footer from "../components/Footer/Footer";
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Footer from '../components/Footer/Footer';
 
 export default {
-  title: "COMPONENTS/Footer",
+  title: 'Components/Footer',
   component: Footer,
   argTypes: {},
 } as ComponentMeta<typeof Footer>;

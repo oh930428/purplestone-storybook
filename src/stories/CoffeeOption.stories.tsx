@@ -1,11 +1,11 @@
-import { Story, Meta } from "@storybook/react";
+import { Story, Meta } from '@storybook/react';
 import {
   CoffeeOption,
   CoffeeOptionProps,
-} from "../components/CoffeeOption/CoffeeOption";
+} from '../components/CoffeeOption/CoffeeOption';
 
 export default {
-  title: "COMPONENTS/CoffeeOption",
+  title: 'Components/CoffeeOption',
   component: CoffeeOption,
 } as Meta;
 
@@ -13,12 +13,12 @@ const Template: Story<CoffeeOptionProps> = (args) => <CoffeeOption {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  bgCircle: require("../assets/images/bg-circle.png"),
+  bgCircle: require('../assets/Images/bg-circle.png'),
   thumbnail: [
     {
       id: 1,
-      name: "brand",
-      image: require("../assets/Icons/starbucks.png"),
+      name: 'brand',
+      image: require('../assets/Icons/brands/starbucks.png'),
     },
   ],
 };
@@ -26,6 +26,6 @@ Default.args = {
 export const selected = Template.bind({});
 selected.args = {
   ...Default.args,
-  bgCircleActive: require("../assets/images/bg-circle-active.png"),
+  bgCircleActive: require('../assets/Images/bg-circle-active.png'),
   isSelected: true,
 };

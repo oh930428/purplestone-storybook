@@ -19,7 +19,7 @@ export const ProfileCard = ({
   return (
     <Container
       style={{
-        backgroundImage: `url(${require('../../../assets/images/bg-profile-card.png')})`,
+        backgroundImage: `url(${require('../../../assets/Images/bg-profile-card.png')})`,
       }}
     >
       <div className="header">

@@ -1,25 +1,25 @@
-import styled from "styled-components";
-import fonts from "../../../styles/font";
-import { IMakeMyCard } from "../../../types/makeMyCard.type";
+import styled from 'styled-components';
+import fonts from '../../../styles/font';
+import { IMakeMyCard } from '../../../types/makeMyCard.type';
 
 const MakeMyCard = ({
   brand,
   temperature,
   beans,
-  time,
+  coffeeType,
   syrup,
 }: IMakeMyCard) => {
   return (
     <Container
       style={{
-        backgroundImage: `url(${require("../../../assets/images/bg-card.png")})`,
+        backgroundImage: `url(${require('../../../assets/Images/bg-card.png')})`,
       }}
     >
       <InputTitle type="text" placeholder="이름을 입력하세요" />
 
       <Dirgram>
         <img
-          src={require("../../../assets/images/bg-digram.png")}
+          src={require('../../../assets/Images/bg-digram.png')}
           alt="다이어그램 이미지"
         />
 
@@ -31,8 +31,8 @@ const MakeMyCard = ({
           <img src={temperature.thumbnail} alt="온도 이미지" />
         </figure>
 
-        <figure className="time-thumbnail">
-          <img src={time.thumbnail} alt="시간 이미지" />
+        <figure className="coffeetype-thumbnail">
+          <img src={coffeeType.thumbnail} alt="커피 종류 이미지" />
         </figure>
       </Dirgram>
 
@@ -51,9 +51,9 @@ const MakeMyCard = ({
         <div className="description">{beans.description}</div>
       </div>
 
-      <div className="time">
-        <div className="name">{time.name}</div>
-        <div className="description">{time.description}</div>
+      <div className="coffeetype">
+        <div className="name">{coffeeType.name}</div>
+        <div className="description">{coffeeType.description}</div>
       </div>
 
       <div className="syrup">
@@ -113,7 +113,7 @@ const Container = styled.div`
     text-align: left;
   }
 
-  .time {
+  .coffeetype {
     width: 150px;
     position: absolute;
     bottom: 47px;
@@ -185,7 +185,7 @@ const Dirgram = styled.figure`
     width: 42px;
   }
 
-  .time-thumbnail {
+  .coffeetype-thumbnail {
     top: 66%;
     left: 29%;
     width: 37px;
