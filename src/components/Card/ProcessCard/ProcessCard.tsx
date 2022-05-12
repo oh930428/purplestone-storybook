@@ -76,21 +76,14 @@ const Container = styled.div`
         }
       }
       .main-title {
-        white-space: pre;
-
         #tasteName {
           ${font.BoldBody2}
-          opacity: 0;
-          transition: opacity 0.5s linear;
         }
       }
     }
     .main-section:hover {
       .main-thumbnail img {
         opacity: 0.5;
-      }
-      .main-title #tasteName {
-        opacity: 1;
       }
     }
   }
