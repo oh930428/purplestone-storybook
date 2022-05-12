@@ -6,4 +6,21 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  options: {
+    storySort: {
+      order: [
+        'Design System',
+        'Components',
+        [
+          'Header',
+          'Navigation',
+          'Footer',
+          'Button',
+          'Card',
+          'IconSocial',
+          'CoffeeOption',
+        ],
+      ],
+    },
+  },
 };
