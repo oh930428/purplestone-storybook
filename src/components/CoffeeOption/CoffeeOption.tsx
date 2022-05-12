@@ -1,76 +1,70 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export interface CoffeeOptionProps {
   bgCircle: string;
   bgCircleActive: string;
   name: string;
-  optionIcons: CoffeeOptionIconsProps;
+  thumbnail: CoffeeOptionIconsProps[];
+  isSelected?: boolean;
 }
 
 export interface CoffeeOptionIconsProps {
-  brandIcon: string;
-  beanIcon: string;
-  cupIcon: string;
-  syrupIcon: string;
-  dayTimeIcon: string;
-  temperatureIcon: string;
+  id: number;
+  name: string;
+  image: string;
 }
 
 export const CoffeeOption = ({
   bgCircle,
   bgCircleActive,
-  name,
-  optionIcons,
+  thumbnail,
+  isSelected = false,
 }: CoffeeOptionProps) => {
   return (
     <Container bgCircle={bgCircle} bgCircleActive={bgCircleActive}>
-      {name === "brand" && (
-        <img className="position-l" src={optionIcons.brandIcon} alt={name} />
-      )}
-      {name === "bean" && (
-        <img className="position-l" src={optionIcons.beanIcon} alt={name} />
-      )}
-      {name === "cup" && (
-        <img className="position-r" src={optionIcons.cupIcon} alt={name} />
-      )}
-      {name === "syrup" && (
-        <img className="syrup-image" src={optionIcons.syrupIcon} alt={name} />
-      )}
-      {name === "dayTime" && <img src={optionIcons.dayTimeIcon} alt={name} />}
-      {name === "temperature" && (
-        <img
-          className="position-r"
-          src={optionIcons.temperatureIcon}
-          alt={name}
-        />
-      )}
+      <ul className="list-container">
+        {thumbnail.map((image, index) => (
+          <li className={`list ${isSelected}`}>
+            <img key={index} src={image.image} alt={image.name} />
+          </li>
+        ))}
+      </ul>
     </Container>
   );
 };
 
 export default CoffeeOption;
 
-const Container = styled.div<{ bgCircle: string; bgCircleActive: string }>`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
-  height: 120px;
-  background-image: ${(props) => `url(${props.bgCircle})`};
-  transition: background-image 0.2s ease;
-  cursor: pointer;
+const Container = styled.div<{
+  bgCircle: string;
+  bgCircleActive: string;
+}>`
+  width: 100%;
+  height: 100%;
 
-  .position-l {
-    position: relative;
-    left: 2.5px;
+  .list-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 
-  .position-r {
-    position: relative;
-    right: 2.5px;
+  .list {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background-image: ${(props) => `url(${props.bgCircle})`};
+    cursor: pointer;
+    list-style: none;
   }
 
-  &:hover {
+  .list.true {
     background-image: ${(props) => `url(${props.bgCircleActive})`};
+  }
+
+  img {
+    height: 70px;
   }
 `;
