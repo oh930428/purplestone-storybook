@@ -28,7 +28,7 @@ Default.args = {
   bottle: {
     name: "텀블러",
     description: "내 취향을 담은 텀블러",
-    thumbnail: require("../assets/Icons/bottles/cup-brown.png"),
+    thumbnail: require("../assets/Icons/bottles/cup-purple.png"),
   },
   temperature: {
     name: "얼.죽.아",

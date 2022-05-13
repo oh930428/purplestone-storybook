@@ -157,8 +157,8 @@ const Dirgram = styled.figure<{ bgDigram: string }>`
   background-repeat: no-repeat;
 
   .digram-thumbnail {
-    width: 65px;
-    height: 100%;
+    width: 90px;
+    height: 125px;
     margin-top: 10px;
     object-fit: contain;
   }
