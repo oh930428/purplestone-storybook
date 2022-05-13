@@ -109,7 +109,41 @@ TemperatureTypes.args = {
 };
 
 export const CoffeeTypes = Template.bind({});
-CoffeeTypes.args = {};
+CoffeeTypes.args = {
+  title: '좋아하는 커피 종류를 선택해주세요.',
+  tasteType: [
+    {
+      id: 1,
+      name: '아메리카노',
+      thumbnail: require('../assets/Icons/coffeetypes/americano.png'),
+    },
+    {
+      id: 2,
+      name: '카페라떼',
+      thumbnail: require('../assets/Icons/coffeetypes/caffelatte.png'),
+    },
+    {
+      id: 3,
+      name: '카페모카',
+      thumbnail: require('../assets/Icons/coffeetypes/caffemoca.png'),
+    },
+    {
+      id: 4,
+      name: '카푸치노',
+      thumbnail: require('../assets/Icons/coffeetypes/cappuccino.png'),
+    },
+    {
+      id: 5,
+      name: '에스프레소',
+      thumbnail: require('../assets/Icons/coffeetypes/espresso.png'),
+    },
+    {
+      id: 6,
+      name: '마끼아또',
+      thumbnail: require('../assets/Icons/coffeetypes/macchiato.png'),
+    },
+  ],
+};
 
 export const BottleTypes = Template.bind({});
 BottleTypes.args = {
