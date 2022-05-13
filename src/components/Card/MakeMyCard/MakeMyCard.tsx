@@ -1,64 +1,51 @@
-import styled from 'styled-components';
-import fonts from '../../../styles/font';
-import { IMakeMyCard } from '../../../types/makeMyCard.type';
+import styled from "styled-components";
+import fonts from "../../../styles/font";
+import { IMakeMyCard } from "../../../types/makeMyCard.type";
 
 const MakeMyCard = ({
+  bgCard,
+  bgDigram,
   brand,
   temperature,
   beans,
-  coffeeType,
-  syrup,
+  coffee,
+  bottle,
 }: IMakeMyCard) => {
   return (
-    <Container
-      style={{
-        backgroundImage: `url(${require('../../../assets/Images/bg-card.png')})`,
-      }}
-    >
+    <Container bgCard={bgCard}>
       <InputTitle type="text" placeholder="이름을 입력하세요" />
 
-      <Dirgram>
+      <Dirgram bgDigram={bgDigram}>
         <img
-          src={require('../../../assets/Images/bg-digram.png')}
-          alt="다이어그램 이미지"
+          className="digram-thumbnail"
+          src={bottle.thumbnail}
+          alt={bottle.name}
         />
-
-        <figure className="brand-thumbnail">
-          <img src={brand.thumbnail} alt="브랜드 이미지" />
-        </figure>
-
-        <figure className="temperature-thumbnail">
-          <img src={temperature.thumbnail} alt="온도 이미지" />
-        </figure>
-
-        <figure className="coffeetype-thumbnail">
-          <img src={coffeeType.thumbnail} alt="커피 종류 이미지" />
-        </figure>
       </Dirgram>
 
-      <div className="barnd">
+      <div className="barnd col">
         <div className="name">{brand.name}</div>
-        <div className="description">{brand.description}</div>
+        <p className="description">{brand.description}</p>
       </div>
 
-      <div className="temperature">
-        <div className="name">{temperature.name}</div>
-        <div className="description">{temperature.description}</div>
-      </div>
-
-      <div className="beans">
+      <div className="beans col">
         <div className="name">{beans.name}</div>
-        <div className="description">{beans.description}</div>
+        <p className="description">{beans.description}</p>
       </div>
 
-      <div className="coffeetype">
-        <div className="name">{coffeeType.name}</div>
-        <div className="description">{coffeeType.description}</div>
+      <div className="bottle col">
+        <div className="name">{bottle.name}</div>
+        <p className="description">{bottle.description}</p>
       </div>
 
-      <div className="syrup">
-        <div className="name">{syrup.name}</div>
-        <div className="description">{syrup.description}</div>
+      <div className="coffee col">
+        <div className="name">{coffee.name}</div>
+        <p className="description">{coffee.description}</p>
+      </div>
+
+      <div className="temperature col">
+        <div className="name">{temperature.name}</div>
+        <p className="description">{temperature.description}</p>
       </div>
     </Container>
   );
@@ -66,7 +53,7 @@ const MakeMyCard = ({
 
 export default MakeMyCard;
 
-const Container = styled.div`
+const Container = styled.div<{ bgCard: string }>`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -76,15 +63,23 @@ const Container = styled.div`
   align-items: center;
   width: 564px;
   height: 423px;
+  background-image: ${(props) => `url(${props.bgCard})`};
   background-repeat: no-repeat;
   background-size: cover;
+
+  .col {
+    position: absolute;
+  }
+
+  p {
+    margin: 0;
+  }
 
   .barnd {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 103px;
+    top: 102px;
     left: 229px;
 
     .name {
@@ -98,35 +93,29 @@ const Container = styled.div`
   }
 
   .temperature {
-    position: absolute;
     top: 177px;
-    left: 42px;
+    left: 37px;
     width: 131px;
     text-align: right;
   }
 
   .beans {
-    position: absolute;
-    top: 177px;
-    right: 42px;
+    top: 172px;
+    right: 36px;
     width: 133px;
     text-align: left;
   }
 
-  .coffeetype {
-    width: 150px;
-    position: absolute;
-    bottom: 47px;
-    left: 134px;
-    width: 102px;
+  .coffee {
+    bottom: 41px;
+    left: 141px;
+    width: 121px;
   }
 
-  .syrup {
-    width: 150px;
-    position: absolute;
-    bottom: 47px;
-    right: 134px;
-    width: 102px;
+  .bottle {
+    bottom: 54px;
+    right: 113px;
+    width: 114px;
   }
 
   .name {
@@ -154,40 +143,23 @@ const InputTitle = styled.input`
   }
 `;
 
-const Dirgram = styled.figure`
-  width: 200px;
+const Dirgram = styled.figure<{ bgDigram: string }>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 190px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background-image: ${(props) => `url(${props.bgDigram})`};
+  background-size: contain;
+  background-repeat: no-repeat;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  figure {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-  }
-
-  .brand-thumbnail {
-    top: 27%;
-    left: 27%;
-    z-index: 100;
-    width: 85px;
-  }
-
-  .temperature-thumbnail {
-    top: 36%;
-    left: 17%;
-    width: 42px;
-  }
-
-  .coffeetype-thumbnail {
-    top: 66%;
-    left: 29%;
-    width: 37px;
+  .digram-thumbnail {
+    width: 90px;
+    height: 125px;
+    margin-top: 10px;
+    object-fit: contain;
   }
 `;
