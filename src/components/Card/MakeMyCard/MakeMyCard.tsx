@@ -1,8 +1,10 @@
-import styled from 'styled-components';
-import fonts from '../../../styles/font';
-import { IMakeMyCard } from '../../../types/makeMyCard.type';
+import styled from "styled-components";
+import fonts from "../../../styles/font";
+import { IMakeMyCard } from "../../../types/makeMyCard.type";
 
 const MakeMyCard = ({
+  bgCard,
+  bgDigram,
   brand,
   temperature,
   beans,
@@ -10,19 +12,10 @@ const MakeMyCard = ({
   syrup,
 }: IMakeMyCard) => {
   return (
-    <Container
-      style={{
-        backgroundImage: `url(${require('../../../assets/Images/bg-card.png')})`,
-      }}
-    >
+    <Container bgCard={bgCard}>
       <InputTitle type="text" placeholder="이름을 입력하세요" />
 
-      <Dirgram>
-        <img
-          src={require('../../../assets/Images/bg-digram.png')}
-          alt="다이어그램 이미지"
-        />
-
+      <Dirgram bgDigram={bgDigram}>
         <figure className="brand-thumbnail">
           <img src={brand.thumbnail} alt="브랜드 이미지" />
         </figure>
@@ -66,7 +59,7 @@ const MakeMyCard = ({
 
 export default MakeMyCard;
 
-const Container = styled.div`
+const Container = styled.div<{ bgCard: string }>`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -76,6 +69,7 @@ const Container = styled.div`
   align-items: center;
   width: 564px;
   height: 423px;
+  background-image: ${(props) => `url(${props.bgCard})`};
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -154,11 +148,12 @@ const InputTitle = styled.input`
   }
 `;
 
-const Dirgram = styled.figure`
+const Dirgram = styled.figure<{ bgDigram: string }>`
   width: 200px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background-image: ${(props) => `url(${props.bgDigram})`};
 
   img {
     width: 100%;
