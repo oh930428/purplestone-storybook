@@ -4,8 +4,8 @@ export interface IMakeMyCard {
   brand: IContents;
   temperature: IContents;
   beans: IContents;
-  coffeeType: IContents;
-  syrup: IContents;
+  coffee: IContents;
+  bottle: IContents;
 }
 
 export interface IContents {
