@@ -1,4 +1,6 @@
 export interface IMakeMyCard {
+  bgCard: string;
+  bgDigram: string;
   brand: IContents;
   temperature: IContents;
   beans: IContents;
