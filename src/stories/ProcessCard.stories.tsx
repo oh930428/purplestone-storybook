@@ -152,12 +152,12 @@ BottleTypes.args = {
     {
       id: 1,
       name: "텀블러",
-      thumbnail: require("../assets/Icons/bottles/cup-sky.png"),
+      thumbnail: require("../assets/Icons/bottles/cup-tembler.png"),
     },
     {
       id: 2,
       name: "테이크 아웃(뜨)",
-      thumbnail: require("../assets/Icons/bottles/cup-brown.png"),
+      thumbnail: require("../assets/Icons/bottles/cup-takeout-hot.png"),
     },
     {
       id: 3,
@@ -167,7 +167,7 @@ BottleTypes.args = {
     {
       id: 4,
       name: "머그 컵",
-      thumbnail: require("../assets/Icons/bottles/cup-purple.png"),
+      thumbnail: require("../assets/Icons/bottles/cup-mug.png"),
     },
     {
       id: 5,

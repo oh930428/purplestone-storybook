@@ -22,7 +22,7 @@ Default.args = {
   tasteIcon: {
     brandIcon: require("../assets/Icons/brands/coffeebean.png"),
     beanIcon: require("../assets/Icons/beans/kenyaAA.png"),
-    bottleIcon: require("../assets/Icons/bottles/cup-purple.png"),
+    bottleIcon: require("../assets/Icons/bottles/cup-mug.png"),
     coffeeTypeIcon: require("../assets/Icons/temperature/hot.png"),
     temperatureIcon: require("../assets/Icons/temperature/ice.png"),
   },

@@ -158,8 +158,7 @@ const Dirgram = styled.figure<{ bgDigram: string }>`
 
   .digram-thumbnail {
     width: 90px;
-    height: 125px;
     margin-top: 10px;
-    object-fit: contain;
+    object-fit: cover;
   }
 `;
