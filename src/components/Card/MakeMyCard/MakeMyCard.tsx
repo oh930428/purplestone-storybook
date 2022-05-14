@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import { useState, useRef, useEffect } from "react";
 import fonts from "../../../styles/font";
+import styled from "styled-components";
 import { IMakeMyCard } from "../../../types/makeMyCard.type";
 
 const MakeMyCard = ({
@@ -11,9 +12,33 @@ const MakeMyCard = ({
   coffee,
   bottle,
 }: IMakeMyCard) => {
+  const [content, setContent] = useState<string>("");
+  const [width, setWidth] = useState<number>(0);
+  const text = useRef<HTMLElement>(null);
+
+  // TODO: input auto width 수정 필요
+  useEffect(() => {
+    text.current && setWidth(text.current.offsetWidth + 100);
+    text.current && console.log(text.current.offsetWidth);
+  }, [content]);
+
+  const changeHandler = (e: any) => {
+    setContent(e.target.value);
+  };
+
   return (
     <Container bgCard={bgCard}>
-      <InputTitle type="text" placeholder="이름을 입력하세요" />
+      <Header width={width}>
+        <span className="hide" ref={text}>
+          {content}
+        </span>
+        <input
+          type="text"
+          autoFocus
+          onChange={changeHandler}
+          placeholder="이름을 입력하세요"
+        />
+      </Header>
 
       <Dirgram bgDigram={bgDigram}>
         <img
@@ -54,10 +79,10 @@ const MakeMyCard = ({
 export default MakeMyCard;
 
 const Container = styled.div<{ bgCard: string }>`
+  position: relative;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,18 +153,26 @@ const Container = styled.div<{ bgCard: string }>`
   }
 `;
 
-const InputTitle = styled.input`
-  width: 55%;
-  margin-top: 50px;
-  color: #5a2b81;
-  outline: 0;
-  border: 0;
-  background: 0;
-  background: linear-gradient(to top, #f5f2c2 50%, transparent 50%);
+const Header = styled.header<{ width: number }>`
+  .hide {
+    position: absolute;
+    opacity: 0;
+    z-index: -100;
+  }
 
-  ${fonts.Hero3}
-  ::placeholder {
+  input {
+    width: ${(props) => props.width}px;
+    margin-top: 50px;
     color: #5a2b81;
+    outline: 0;
+    border: 0;
+    background: 0;
+    background: linear-gradient(to top, #f5f2c2 50%, transparent 50%);
+
+    ${fonts.Hero3}
+    ::placeholder {
+      color: #5a2b81;
+    }
   }
 `;
 
