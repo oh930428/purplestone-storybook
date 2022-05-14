@@ -23,8 +23,8 @@ Default.args = {
     brandIcon: require("../assets/Icons/brands/coffeebean.png"),
     beanIcon: require("../assets/Icons/beans/kenyaAA.png"),
     bottleIcon: require("../assets/Icons/bottles/cup-mug.png"),
-    coffeeTypeIcon: require("../assets/Icons/temperature/hot.png"),
-    temperatureIcon: require("../assets/Icons/temperature/ice.png"),
+    coffeeTypeIcon: require("../assets/Icons/coffeetypes/caffemocha.png"),
+    temperatureIcon: require("../assets/Icons/temperature/hot.png"),
   },
   tasteDigram: {
     brandName: "Coffee Bean",
