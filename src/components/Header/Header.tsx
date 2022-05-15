@@ -1,12 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import font from '../../styles/font';
 
-export interface HeaderProps {
-  title: string;
-  subTitle: string;
-  textAlign?: string;
-}
+import font from '../../styles/font';
+import { HeaderProps } from '../../types/header.type';
 
 export const Header = ({ title, subTitle, textAlign }: HeaderProps) => {
   return (

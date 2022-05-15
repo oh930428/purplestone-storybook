@@ -1,13 +1,6 @@
-import styled, { css } from "styled-components";
-import fonts from "../../styles/font";
-
-export interface ButtonProps {
-  theme: string;
-  size: string;
-  label: string;
-  isRegular?: boolean;
-  onClick?: () => void;
-}
+import styled, { css } from 'styled-components';
+import { fonts } from '../../styles';
+import { ButtonProps } from '../../types/button.type';
 
 export const Button = ({
   theme,
@@ -35,7 +28,7 @@ const Container = styled.button<{
 
   /* theme */
   ${(props) =>
-    props.theme === "default" &&
+    props.theme === 'default' &&
     css`
       ${fonts.Headline4}
       width: 100%;
@@ -45,7 +38,7 @@ const Container = styled.button<{
     `}
 
   ${(props) =>
-    props.theme === "primary" &&
+    props.theme === 'primary' &&
     css`
       ${fonts.Headline4}
       width: 100%;
@@ -54,7 +47,7 @@ const Container = styled.button<{
       border: 1px solid #212121;
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         width: 100%;
         height: 100%;
@@ -69,7 +62,7 @@ const Container = styled.button<{
     `}
 
     ${(props) =>
-    props.theme === "disabled" &&
+    props.theme === 'disabled' &&
     css`
       ${fonts.Headline4}
       width: 100%;
@@ -82,7 +75,7 @@ const Container = styled.button<{
     `}
 
     ${(props) =>
-    props.theme === "error" &&
+    props.theme === 'error' &&
     css`
       width: 100%;
       height: 60px;
@@ -94,7 +87,7 @@ const Container = styled.button<{
 
   /* button size */
   ${(props) =>
-    props.size === "medium" &&
+    props.size === 'medium' &&
     css`
       ${fonts.Headline4}
       width: 180px;
@@ -104,11 +97,11 @@ const Container = styled.button<{
     `}
 
   ${(props) =>
-    props.size === "large" &&
+    props.size === 'large' &&
     css`
       width: 244px;
       height: 85px;
-      font-family: "Noto Sans";
+      font-family: 'Noto Sans';
       font-style: normal;
       font-weight: 500;
       font-size: 24px;

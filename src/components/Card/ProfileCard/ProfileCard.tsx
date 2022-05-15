@@ -1,14 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import font from '../../../styles/font';
-import IconSocial, { IconSocialProps } from '../../Icon/IconSocial';
 
-export interface ProfileCardProps {
-  userName: string;
-  descrition: string;
-  thumbnail: string;
-  iconSocials: IconSocialProps[];
-}
+import font from '../../../styles/font';
+import { ProfileCardProps } from '../../../types/profileCard.type';
+import IconSocial from '../../Icon/IconSocial';
 
 export const ProfileCard = ({
   userName,

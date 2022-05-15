@@ -1,22 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Icons, TasteIconProps } from './Icon';
 
-export interface MakeMyCardSmallProps {
-  bgCard: string;
-  bgDigram: string;
-  userName: string;
-  tasteIcon: TasteIconProps;
-  tasteDigram: TasteDigramProps;
-}
-
-export interface TasteDigramProps {
-  brandName: string;
-  beanName: string;
-  coffeeTypeName: string;
-  bottleName: string;
-  temperature: string;
-}
+import { MakeMyCardSmallProps } from '../../../types/makeMyCardSmall.type';
+import { Icons } from './Icon';
 
 export const MakeMyCardSmall = ({
   bgCard,

@@ -1,6 +1,7 @@
-import fonts from "../../styles/font";
-import styled from "styled-components";
-import IconSocial from "../Icon/IconSocial";
+import styled from 'styled-components';
+
+import fonts from '../../styles/font';
+import IconSocial from '../Icon/IconSocial';
 
 const Footer = () => {
   return (

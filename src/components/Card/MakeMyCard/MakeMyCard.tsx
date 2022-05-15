@@ -1,7 +1,8 @@
-import { useState, useRef, useEffect } from "react";
-import fonts from "../../../styles/font";
-import styled from "styled-components";
-import { IMakeMyCard } from "../../../types/makeMyCard.type";
+import { useState, useRef, useEffect } from 'react';
+import styled from 'styled-components';
+
+import { fonts } from '../../../styles';
+import { MakeMyCardProps } from '../../../types/MakeMyCard.type';
 
 const MakeMyCard = ({
   bgCard,
@@ -11,8 +12,8 @@ const MakeMyCard = ({
   beans,
   coffee,
   bottle,
-}: IMakeMyCard) => {
-  const [content, setContent] = useState<string>("");
+}: MakeMyCardProps) => {
+  const [content, setContent] = useState<string>('');
   const [width, setWidth] = useState<number>(0);
   const text = useRef<HTMLElement>(null);
 

@@ -1,13 +1,12 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Story, Meta } from '@storybook/react';
 import Navigation from '../components/Navigation/Navigation';
 
 export default {
   title: 'Components/Navigation',
   component: Navigation,
-  argTypes: {},
-} as ComponentMeta<typeof Navigation>;
+} as Meta;
 
-const Template: ComponentStory<typeof Navigation> = (args) => <Navigation />;
+const Template: Story = () => <Navigation />;
 
 export const Default = Template.bind({});
 Default.args = {};

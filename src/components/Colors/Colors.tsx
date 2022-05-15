@@ -1,13 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ColorCard, ColorCardProps } from './ColorCard';
 
-export interface ColorsProps {
-  bgImage: string;
-  title: string;
-  subTitle: string;
-  colorCardList: ColorCardProps[];
-}
+import { ColorsProps, ColorCardProps } from '../../types/colors.type';
+import { ColorCard } from './ColorCard';
 
 export const Colors = ({ title, subTitle, colorCardList }: ColorsProps) => {
   return (

@@ -1,8 +1,6 @@
 import { Story, Meta } from '@storybook/react';
-import {
-  CoffeeOption,
-  CoffeeOptionProps,
-} from '../components/CoffeeOption/CoffeeOption';
+import { CoffeeOption } from '../components/CoffeeOption/CoffeeOption';
+import { CoffeeOptionProps } from '../types/coffeeOption.type';
 
 export default {
   title: 'Components/CoffeeOption',

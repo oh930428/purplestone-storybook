@@ -1,14 +1,14 @@
-export interface IMakeMyCard {
+export interface MakeMyCardProps {
   bgCard: string;
   bgDigram: string;
-  brand: IContents;
-  temperature: IContents;
-  beans: IContents;
-  coffee: IContents;
-  bottle: IContents;
+  brand: ContentsProps;
+  temperature: ContentsProps;
+  beans: ContentsProps;
+  coffee: ContentsProps;
+  bottle: ContentsProps;
 }
 
-export interface IContents {
+export interface ContentsProps {
   thumbnail?: string;
   name: string;
   description: string;

@@ -1,18 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import font from "../../../styles/font";
-
-export interface ProcessCardProps {
-  title: string;
-  tasteType: TasteTypeProps[];
-}
-
-export interface TasteTypeProps {
-  id: number;
-  name: string;
-  thumbnail: string;
-}
+import font from '../../../styles/font';
+import { ProcessCardProps } from '../../../types/processCard.type';
 
 export const ProcessCard = ({ title, tasteType }: ProcessCardProps) => {
   return (
@@ -80,7 +70,7 @@ const Container = styled.div`
       }
       .main-title {
         #tasteName {
-          font-family: "Noto Sans CJK KR";
+          font-family: 'Noto Sans CJK KR';
           font-weight: bold;
           font-size: 12px;
           line-height: 18px;

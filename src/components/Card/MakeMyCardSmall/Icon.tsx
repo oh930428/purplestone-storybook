@@ -1,13 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export interface TasteIconProps {
-  brandIcon: string;
-  beanIcon: string;
-  coffeeTypeIcon: string;
-  bottleIcon: string;
-  temperatureIcon: string;
-}
+import { TasteIconProps } from '../../../types/makeMyCardSmall.type';
 
 export const Icons = ({
   brandIcon,
