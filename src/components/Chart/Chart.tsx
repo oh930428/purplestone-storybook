@@ -5,7 +5,7 @@ import { ChartProps } from '../../types/chart.type';
 import { Header } from '../Header/Header';
 import { Doghnut } from './Doghnut';
 
-export const Chart = ({ labels, datasets }: ChartProps) => {
+export const Chart = ({ labels, datasets, options, styles }: ChartProps) => {
   return (
     <Container>
       <div className="header">
@@ -16,7 +16,12 @@ export const Chart = ({ labels, datasets }: ChartProps) => {
       </div>
       <div className="main">
         <div className="main-section">
-          <Doghnut labels={labels} datasets={datasets} />
+          <Doghnut
+            labels={labels}
+            datasets={datasets}
+            options={options}
+            styles={styles}
+          />
         </div>
       </div>
     </Container>
