@@ -1,6 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import MakeMyCard from '../components/Card/MakeMyCard/MakeMyCard';
-import { MakeMyCardProps } from '../types/MakeMyCard.type';
+import { MakeMyCardProps } from '../types/makeMyCard.type';
 
 export default {
   title: 'Components/Card/MakeMyCard',
