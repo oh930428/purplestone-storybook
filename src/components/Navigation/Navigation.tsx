@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+
+import { colors } from '../../styles';
 import { Button } from '../Button/Button';
 
 const Navigation = () => {
@@ -44,7 +46,7 @@ const Container = styled.nav`
   a {
     text-decoration: none;
     outline: none;
-    color: #5a2b81;
+    color: ${colors.Primary_01};
   }
 `;
 
@@ -54,7 +56,7 @@ const Logo = styled.h1`
   font-weight: 600;
   line-height: 36px;
   text-align: left;
-  color: #5a2b81;
+  color: ${colors.Primary_01};
 `;
 
 const Gnb = styled.ul`
@@ -68,7 +70,7 @@ const Gnb = styled.ul`
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
-    color: #5a2b81;
+    color: ${colors.Primary_01};
 
     .nav-button-item {
       font-weight: 400;

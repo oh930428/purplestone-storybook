@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { fonts } from '../../styles';
+import { colors, fonts } from '../../styles';
 import { ButtonProps } from '../../types/button.type';
 
 export const Button = ({
@@ -34,7 +34,7 @@ const Container = styled.button<{
       width: 100%;
       height: 60px;
       color: rgb(102, 102, 102);
-      border: 1px solid #212121;
+      border: 1px solid ${colors.Gray_01};
     `}
 
   ${(props) =>
@@ -44,7 +44,7 @@ const Container = styled.button<{
       width: 100%;
       height: 60px;
       color: rgb(102, 102, 102);
-      border: 1px solid #212121;
+      border: 1px solid ${colors.Gray_01};
 
       &::after {
         content: '';
@@ -53,7 +53,7 @@ const Container = styled.button<{
         height: 100%;
         left: 0;
         top: 0;
-        background: #f5ee84;
+        background: ${colors.Secondary_02};
         border-radius: 6px;
         transform: translate(10px, 10px);
         transition: transform 0.2s ease;
@@ -67,7 +67,7 @@ const Container = styled.button<{
       ${fonts.Headline4}
       width: 100%;
       height: 60px;
-      color: #fff;
+      color: ${colors.White};
       border: none;
       background-color: rgb(215, 219, 226);
       pointer-events: none;
@@ -81,7 +81,7 @@ const Container = styled.button<{
       height: 60px;
       border: none;
       ${fonts.Headline4}
-      color: #fff;
+      color: ${colors.White};
       background-color: rgb(233, 104, 127);
     `}
 
@@ -92,8 +92,8 @@ const Container = styled.button<{
       ${fonts.Headline4}
       width: 180px;
       height: 60px;
-      color: #5a2b81;
-      border: 1px solid #212121;
+      color: ${colors.Primary_01};
+      border: 1px solid ${colors.Gray_01};
     `}
 
   ${(props) =>

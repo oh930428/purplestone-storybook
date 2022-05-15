@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { colors } from '../../../styles';
 import { TasteIconProps } from '../../../types/makeMyCardSmall.type';
 
 export const Icons = ({
@@ -41,7 +42,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: ${colors.White};
     border-radius: 10px;
     padding: 5px;
 

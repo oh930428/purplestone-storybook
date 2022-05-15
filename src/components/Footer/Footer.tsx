@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import fonts from '../../styles/font';
+import { fonts, colors } from '../../styles';
 import IconSocial from '../Icon/IconSocial';
 
 const Footer = () => {
@@ -34,7 +34,7 @@ export default Footer;
 const Container = styled.footer`
   width: 100%;
   height: 160px;
-  background-color: #5a2b81;
+  background-color: ${colors.Primary_01};
   margin: 0;
 
   a {
@@ -51,7 +51,7 @@ const Logo = styled.h1`
   margin-top: 26px;
 
   a {
-    color: #fff;
+    color: ${colors.White};
   }
 `;
 
@@ -67,7 +67,7 @@ const Wrapper = styled.div`
   p {
     ${fonts.RegularBody2}
     margin-right: 250px;
-    color: #fff;
+    color: ${colors.White};
   }
 `;
 

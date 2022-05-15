@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
-import { fonts } from '../../../styles';
+import { colors, fonts } from '../../../styles';
 import { MakeMyCardProps } from '../../../types/MakeMyCard.type';
 
 const MakeMyCard = ({
@@ -164,7 +164,7 @@ const Header = styled.header<{ width: number }>`
   input {
     width: ${(props) => props.width}px;
     margin-top: 50px;
-    color: #5a2b81;
+    color: ${colors.Primary_01};
     outline: 0;
     border: 0;
     background: 0;
@@ -172,7 +172,7 @@ const Header = styled.header<{ width: number }>`
 
     ${fonts.Hero3}
     ::placeholder {
-      color: #5a2b81;
+      color: ${colors.Primary_01};
     }
   }
 `;

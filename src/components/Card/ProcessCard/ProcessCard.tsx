@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import font from '../../../styles/font';
+import { colors, fonts } from '../../../styles';
 import { ProcessCardProps } from '../../../types/processCard.type';
 
 export const ProcessCard = ({ title, tasteType }: ProcessCardProps) => {
@@ -30,17 +30,17 @@ const Container = styled.div`
   align-items: center;
   gap: 10px;
   padding: 24px 20px;
-  background-color: #ffffff;
+  background-color: ${colors.White};
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   width: 400px;
 
   .header {
     margin-bottom: 7px;
-    ${font.Headline2}
+    ${fonts.Headline2}
     line-height: 32px;
     letter-spacing: -0.01em;
-    color: #5a2b81;
+    color: ${colors.Primary_01};
   }
   .main {
     display: grid;
@@ -60,7 +60,7 @@ const Container = styled.div`
         img {
           width: 90px;
           height: 90px;
-          background-color: #f5f5f5;
+          background-color: ${colors.Gray_06};
           box-sizing: border-box;
           border-radius: 50%;
           padding: 0.5rem;

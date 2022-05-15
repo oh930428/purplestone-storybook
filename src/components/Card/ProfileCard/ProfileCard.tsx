@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import font from '../../../styles/font';
+import { fonts } from '../../../styles';
 import { ProfileCardProps } from '../../../types/profileCard.type';
 import IconSocial from '../../Icon/IconSocial';
 
@@ -66,7 +66,7 @@ const Container = styled.div`
     .header-title {
       text-align: center;
       span {
-        ${font.Headline1}
+        ${fonts.Headline1}
         line-height: 32px;
         color: #614e32;
         letter-spacing: -0.01em;
@@ -82,7 +82,7 @@ const Container = styled.div`
     padding: 0px 73px;
 
     .main-section {
-      ${font.MediumBody1}
+      ${fonts.MediumBody1}
       text-align: center;
     }
 

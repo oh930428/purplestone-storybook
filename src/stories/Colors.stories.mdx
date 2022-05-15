@@ -1,5 +1,7 @@
 import { Preview, Meta } from '@storybook/addon-docs';
+
 import { Colors } from '../components/Colors/Colors';
+import { colors } from '../styles';
 
 <Meta title="Design System/Colors" component={Colors} />
 
@@ -12,15 +14,15 @@ import { Colors } from '../components/Colors/Colors';
     colorCardList={[
       {
         colorTitle: 'Black',
-        cardColor: '#ffffff',
-        colorValue: '#000000',
+        cardColor: `${colors.White}`,
+        colorValue: `${colors.Black}`,
         useColor: '텍스트',
       },
       {
         colorTitle: 'White',
-        cardColor: '#000000',
+        cardColor: `${colors.Black}`,
         cardBorder: true,
-        colorValue: '#FFFFFF',
+        colorValue: `${colors.White}`,
         useColor: '배경',
       },
     ]}
@@ -31,38 +33,38 @@ import { Colors } from '../components/Colors/Colors';
     colorCardList={[
       {
         colorTitle: 'Gray_01',
-        cardColor: '#ffffff',
-        colorValue: '#212121',
+        cardColor: `${colors.White}`,
+        colorValue: `${colors.Gray_01}`,
         useColor: '주 사용처 입력',
       },
       {
         colorTitle: 'Gray_02',
-        cardColor: '#ffffff',
-        colorValue: '#616161',
+        cardColor: `${colors.White}`,
+        colorValue: `${colors.Gray_02}`,
         useColor: '주 사용처 입력',
       },
       {
         colorTitle: 'Gray_03',
-        cardColor: '#ffffff',
-        colorValue: '#888888',
+        cardColor: `${colors.White}`,
+        colorValue: `${colors.Gray_03}`,
         useColor: '주 사용처 입력',
       },
       {
         colorTitle: 'Gray_04',
-        cardColor: '#ffffff',
-        colorValue: '#CCCCCC',
+        cardColor: `${colors.White}`,
+        colorValue: `${colors.Gray_04}`,
         useColor: '주 사용처 입력',
       },
       {
         colorTitle: 'Gray_05',
-        cardColor: '#000000',
-        colorValue: '#EEEEEE',
+        cardColor: `${colors.Black}`,
+        colorValue: `${colors.Gray_05}`,
         useColor: '주 사용처 입력',
       },
       {
         colorTitle: 'Gray_06',
-        cardColor: '#000000',
-        colorValue: '#F5F5F5',
+        cardColor: `${colors.Black}`,
+        colorValue: `${colors.Gray_06}`,
         useColor: '주 사용처 입력',
       },
     ]}
@@ -73,14 +75,14 @@ import { Colors } from '../components/Colors/Colors';
     colorCardList={[
       {
         colorTitle: 'Primary_01',
-        cardColor: '#ffffff',
-        colorValue: '#5A2B81',
+        cardColor: `${colors.White}`,
+        colorValue: `${colors.Primary_01}`,
         useColor: '활성화',
       },
       {
-        colorTitle: 'Primary_01',
-        cardColor: '#000000',
-        colorValue: '#CECBEF',
+        colorTitle: 'Primary_02',
+        cardColor: `${colors.Black}`,
+        colorValue: `${colors.Primary_02}`,
         useColor: '포인트 컬러',
       },
     ]}
@@ -91,20 +93,20 @@ import { Colors } from '../components/Colors/Colors';
     colorCardList={[
       {
         colorTitle: 'Secondary_01',
-        cardColor: '#ffffff',
-        colorValue: '#75372A',
+        cardColor: `${colors.White}`,
+        colorValue: `${colors.Secondary_01}`,
         useColor: '플래그',
       },
       {
         colorTitle: 'Secondary_02',
-        cardColor: '#000000',
-        colorValue: '#F5EE84',
+        cardColor: `${colors.Black}`,
+        colorValue: `${colors.Secondary_02}`,
         useColor: '플래그',
       },
       {
         colorTitle: 'Secondary_03',
-        cardColor: '#000000',
-        colorValue: '#F5F2C2',
+        cardColor: `${colors.Black}`,
+        colorValue: `${colors.Secondary_03}`,
         useColor: '플래그',
       },
     ]}
