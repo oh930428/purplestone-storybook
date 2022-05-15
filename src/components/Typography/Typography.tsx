@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import fonts from "../../styles/font";
+import styled from 'styled-components';
+
+import { fonts } from '../../styles';
 
 const Typography = () => {
   return (
@@ -119,14 +120,14 @@ const Overview = styled.div`
 
 const Title = styled.h1`
   padding: 40px 0px 4px;
-  font: bold 40px/1.2 "arial";
+  font: bold 40px/1.2 'arial';
   color: #222;
   border-bottom: 1px solid gray;
 `;
 
 const Title2 = styled.h2`
   color: #222;
-  font: normal 28px/1.2 "arial";
+  font: normal 28px/1.2 'arial';
 `;
 
 const Hero1 = styled.div`

@@ -1,13 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ColorCard, ColorCardProps } from './ColorCard';
 
-export interface ColorsProps {
-  bgImage: string;
-  title: string;
-  subTitle: string;
-  colorCardList: ColorCardProps[];
-}
+import { colors } from '../../styles';
+import { ColorsProps, ColorCardProps } from '../../types/colors.type';
+import { ColorCard } from './ColorCard';
 
 export const Colors = ({ title, subTitle, colorCardList }: ColorsProps) => {
   return (
@@ -48,7 +44,7 @@ const Container = styled.div`
         letter-spacing: -1%;
       }
       .subtitle {
-        color: #888888;
+        color: ${colors.Gray_03};
         font-size: 15px;
         font-weight: 400;
         line-height: 21px;

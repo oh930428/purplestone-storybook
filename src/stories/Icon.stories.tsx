@@ -1,5 +1,7 @@
 import { Story, Meta } from '@storybook/react';
-import { IconSocial, IconSocialProps } from '../components/Icon/IconSocial';
+
+import { IconSocial } from '../components/Icon/IconSocial';
+import { IconSocialProps } from '../types/iconSocial.type';
 
 export default {
   title: 'Components/IconSocial',

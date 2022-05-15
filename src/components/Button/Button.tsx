@@ -1,13 +1,6 @@
-import styled, { css } from "styled-components";
-import fonts from "../../styles/font";
-
-export interface ButtonProps {
-  theme: string;
-  size: string;
-  label: string;
-  isRegular?: boolean;
-  onClick?: () => void;
-}
+import styled, { css } from 'styled-components';
+import { colors, fonts } from '../../styles';
+import { ButtonProps } from '../../types/button.type';
 
 export const Button = ({
   theme,
@@ -35,32 +28,32 @@ const Container = styled.button<{
 
   /* theme */
   ${(props) =>
-    props.theme === "default" &&
+    props.theme === 'default' &&
     css`
       ${fonts.Headline4}
       width: 100%;
       height: 60px;
       color: rgb(102, 102, 102);
-      border: 1px solid #212121;
+      border: 1px solid ${colors.Gray_01};
     `}
 
   ${(props) =>
-    props.theme === "primary" &&
+    props.theme === 'primary' &&
     css`
       ${fonts.Headline4}
       width: 100%;
       height: 60px;
       color: rgb(102, 102, 102);
-      border: 1px solid #212121;
+      border: 1px solid ${colors.Gray_01};
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         width: 100%;
         height: 100%;
         left: 0;
         top: 0;
-        background: #f5ee84;
+        background: ${colors.Secondary_02};
         border-radius: 6px;
         transform: translate(10px, 10px);
         transition: transform 0.2s ease;
@@ -69,12 +62,12 @@ const Container = styled.button<{
     `}
 
     ${(props) =>
-    props.theme === "disabled" &&
+    props.theme === 'disabled' &&
     css`
       ${fonts.Headline4}
       width: 100%;
       height: 60px;
-      color: #fff;
+      color: ${colors.White};
       border: none;
       background-color: rgb(215, 219, 226);
       pointer-events: none;
@@ -82,33 +75,33 @@ const Container = styled.button<{
     `}
 
     ${(props) =>
-    props.theme === "error" &&
+    props.theme === 'error' &&
     css`
       width: 100%;
       height: 60px;
       border: none;
       ${fonts.Headline4}
-      color: #fff;
+      color: ${colors.White};
       background-color: rgb(233, 104, 127);
     `}
 
   /* button size */
   ${(props) =>
-    props.size === "medium" &&
+    props.size === 'medium' &&
     css`
       ${fonts.Headline4}
       width: 180px;
       height: 60px;
-      color: #5a2b81;
-      border: 1px solid #212121;
+      color: ${colors.Primary_01};
+      border: 1px solid ${colors.Gray_01};
     `}
 
   ${(props) =>
-    props.size === "large" &&
+    props.size === 'large' &&
     css`
       width: 244px;
       height: 85px;
-      font-family: "Noto Sans";
+      font-family: 'Noto Sans';
       font-style: normal;
       font-weight: 500;
       font-size: 24px;

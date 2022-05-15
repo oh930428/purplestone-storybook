@@ -1,18 +1,5 @@
-import styled from "styled-components";
-
-export interface CoffeeOptionProps {
-  bgCircle: string;
-  bgCircleActive: string;
-  name: string;
-  thumbnail: CoffeeOptionIconsProps[];
-  isSelected?: boolean;
-}
-
-export interface CoffeeOptionIconsProps {
-  id: number;
-  name: string;
-  image: string;
-}
+import styled from 'styled-components';
+import { CoffeeOptionProps } from '../../types/coffeeOption.type';
 
 export const CoffeeOption = ({
   bgCircle,

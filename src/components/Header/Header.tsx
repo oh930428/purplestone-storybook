@@ -1,12 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import font from '../../styles/font';
 
-export interface HeaderProps {
-  title: string;
-  subTitle: string;
-  textAlign?: string;
-}
+import { colors, fonts } from '../../styles';
+import { HeaderProps } from '../../types/header.type';
 
 export const Header = ({ title, subTitle, textAlign }: HeaderProps) => {
   return (
@@ -32,11 +28,15 @@ const Container = styled.div<{ textAlign?: string }>`
     align-items: flex-end;
 
     span {
-      ${font.Hero2}
+      ${fonts.Hero2}
       line-height: 80px;
-      color: #5a2b81;
+      color: ${colors.Primary_01};
       letter-spacing: -0.01em;
-      background: linear-gradient(to top, #f5f2c1 40%, transparent 50%);
+      background: linear-gradient(
+        to top,
+        ${colors.Secondary_03} 40%,
+        transparent 50%
+      );
     }
   }
 
@@ -46,7 +46,7 @@ const Container = styled.div<{ textAlign?: string }>`
       font-weight: 500;
       line-height: 32px;
       letter-spacing: -0.01em;
-      color: #75372a;
+      color: ${colors.Secondary_01};
     }
   }
 `;

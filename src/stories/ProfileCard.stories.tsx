@@ -1,8 +1,7 @@
 import { Story, Meta } from '@storybook/react';
-import {
-  ProfileCard,
-  ProfileCardProps,
-} from '../components/Card/ProfileCard/ProfileCard';
+
+import { ProfileCard } from '../components/Card/ProfileCard/ProfileCard';
+import { ProfileCardProps } from '../types/profileCard.type';
 
 export default {
   title: 'Components/Card/ProfileCard',

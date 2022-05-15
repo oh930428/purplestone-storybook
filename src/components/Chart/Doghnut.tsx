@@ -2,18 +2,9 @@ import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 
-import { ChartProps } from './Chart';
+import { ChartProps } from '../../types/chart.type';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
-
-export interface ChartDataSetProps {
-  label: string;
-  data: number[];
-  backgroundColor: string[];
-  borderColor: string[];
-  borderWidth: number;
-  hoverOffset: number;
-}
 
 export const Doghnut = ({ labels, datasets }: ChartProps) => {
   const data = {

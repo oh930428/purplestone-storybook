@@ -1,13 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export interface TasteIconProps {
-  brandIcon: string;
-  beanIcon: string;
-  coffeeTypeIcon: string;
-  bottleIcon: string;
-  temperatureIcon: string;
-}
+import { colors } from '../../../styles';
+import { TasteIconProps } from '../../../types/makeMyCardSmall.type';
 
 export const Icons = ({
   brandIcon,
@@ -47,7 +42,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: ${colors.White};
     border-radius: 10px;
     padding: 5px;
 

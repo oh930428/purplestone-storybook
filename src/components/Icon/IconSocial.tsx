@@ -1,8 +1,5 @@
 import styled, { css } from 'styled-components';
-
-export interface IconSocialProps {
-  name: string;
-}
+import { IconSocialProps } from '../../types/iconSocial.type';
 
 export const IconSocial = ({ name }: IconSocialProps) => {
   return (

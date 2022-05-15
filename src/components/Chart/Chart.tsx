@@ -1,13 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { ChartProps } from '../../types/chart.type';
 import { Header } from '../Header/Header';
-import { Doghnut, ChartDataSetProps } from './Doghnut';
-
-export interface ChartProps {
-  labels: string[];
-  datasets: ChartDataSetProps;
-}
+import { Doghnut } from './Doghnut';
 
 export const Chart = ({ labels, datasets }: ChartProps) => {
   return (

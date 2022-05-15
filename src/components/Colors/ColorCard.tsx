@@ -1,13 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export interface ColorCardProps {
-  cardColor: string;
-  cardBorder?: boolean;
-  colorTitle: string;
-  colorValue: string;
-  useColor: string;
-}
+import { ColorCardProps } from '../../types/colors.type';
 
 export const ColorCard = ({
   cardColor,
