@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import font from "../../../styles/font";
+import font from '../../../styles/font';
 
 export interface ProcessCardProps {
   title: string;
@@ -46,7 +46,6 @@ const Container = styled.div`
   width: 400px;
 
   .header {
-    margin-bottom: 7px;
     ${font.Headline2}
     line-height: 32px;
     letter-spacing: -0.01em;
@@ -56,15 +55,13 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(90px, auto);
-    grid-gap: 15px;
+    grid-gap: 8px;
 
     .main-section {
       display: flex;
       flex-flow: column;
       align-items: center;
-      width: 118px;
       gap: 2px;
-      cursor: pointer;
 
       .main-thumbnail {
         img {
@@ -75,22 +72,18 @@ const Container = styled.div`
           border-radius: 50%;
           padding: 0.5rem;
           object-fit: contain;
-          transition: transform 0.1s linear;
+          transition: opacity 0.3s linear;
         }
       }
       .main-title {
         #tasteName {
-          font-family: "Noto Sans CJK KR";
-          font-weight: bold;
-          font-size: 12px;
-          line-height: 18px;
-          letter-spacing: 0.02rem;
+          ${font.BoldBody2}
         }
       }
     }
     .main-section:hover {
       .main-thumbnail img {
-        transform: scale(1.2);
+        opacity: 0.5;
       }
     }
   }

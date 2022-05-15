@@ -1,11 +1,9 @@
 export interface IMakeMyCard {
-  bgCard: string;
-  bgDigram: string;
   brand: IContents;
   temperature: IContents;
   beans: IContents;
-  coffee: IContents;
-  bottle: IContents;
+  coffeeType: IContents;
+  syrup: IContents;
 }
 
 export interface IContents {

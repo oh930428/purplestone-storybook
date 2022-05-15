@@ -1,76 +1,64 @@
-import { useState, useRef, useEffect } from "react";
-import fonts from "../../../styles/font";
-import styled from "styled-components";
-import { IMakeMyCard } from "../../../types/makeMyCard.type";
+import styled from 'styled-components';
+import fonts from '../../../styles/font';
+import { IMakeMyCard } from '../../../types/makeMyCard.type';
 
 const MakeMyCard = ({
-  bgCard,
-  bgDigram,
   brand,
   temperature,
   beans,
-  coffee,
-  bottle,
+  coffeeType,
+  syrup,
 }: IMakeMyCard) => {
-  const [content, setContent] = useState<string>("");
-  const [width, setWidth] = useState<number>(0);
-  const text = useRef<HTMLElement>(null);
-
-  // TODO: input auto width 수정 필요
-  useEffect(() => {
-    text.current && setWidth(text.current.offsetWidth + 100);
-    text.current && console.log(text.current.offsetWidth);
-  }, [content]);
-
-  const changeHandler = (e: any) => {
-    setContent(e.target.value);
-  };
-
   return (
-    <Container bgCard={bgCard}>
-      <Header width={width}>
-        <span className="hide" ref={text}>
-          {content}
-        </span>
-        <input
-          type="text"
-          autoFocus
-          onChange={changeHandler}
-          placeholder="이름을 입력하세요"
-        />
-      </Header>
+    <Container
+      style={{
+        backgroundImage: `url(${require('../../../assets/Images/bg-card.png')})`,
+      }}
+    >
+      <InputTitle type="text" placeholder="이름을 입력하세요" />
 
-      <Dirgram bgDigram={bgDigram}>
+      <Dirgram>
         <img
-          className="digram-thumbnail"
-          src={bottle.thumbnail}
-          alt={bottle.name}
+          src={require('../../../assets/Images/bg-digram.png')}
+          alt="다이어그램 이미지"
         />
+
+        <figure className="brand-thumbnail">
+          <img src={brand.thumbnail} alt="브랜드 이미지" />
+        </figure>
+
+        <figure className="temperature-thumbnail">
+          <img src={temperature.thumbnail} alt="온도 이미지" />
+        </figure>
+
+        <figure className="coffeetype-thumbnail">
+          <img src={coffeeType.thumbnail} alt="커피 종류 이미지" />
+        </figure>
       </Dirgram>
 
-      <div className="barnd col">
+      <div className="barnd">
         <div className="name">{brand.name}</div>
-        <p className="description">{brand.description}</p>
+        <div className="description">{brand.description}</div>
       </div>
 
-      <div className="beans col">
-        <div className="name">{beans.name}</div>
-        <p className="description">{beans.description}</p>
-      </div>
-
-      <div className="bottle col">
-        <div className="name">{bottle.name}</div>
-        <p className="description">{bottle.description}</p>
-      </div>
-
-      <div className="coffee col">
-        <div className="name">{coffee.name}</div>
-        <p className="description">{coffee.description}</p>
-      </div>
-
-      <div className="temperature col">
+      <div className="temperature">
         <div className="name">{temperature.name}</div>
-        <p className="description">{temperature.description}</p>
+        <div className="description">{temperature.description}</div>
+      </div>
+
+      <div className="beans">
+        <div className="name">{beans.name}</div>
+        <div className="description">{beans.description}</div>
+      </div>
+
+      <div className="coffeetype">
+        <div className="name">{coffeeType.name}</div>
+        <div className="description">{coffeeType.description}</div>
+      </div>
+
+      <div className="syrup">
+        <div className="name">{syrup.name}</div>
+        <div className="description">{syrup.description}</div>
       </div>
     </Container>
   );
@@ -78,33 +66,25 @@ const MakeMyCard = ({
 
 export default MakeMyCard;
 
-const Container = styled.div<{ bgCard: string }>`
-  position: relative;
+const Container = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 564px;
   height: 423px;
-  background-image: ${(props) => `url(${props.bgCard})`};
   background-repeat: no-repeat;
   background-size: cover;
-
-  .col {
-    position: absolute;
-  }
-
-  p {
-    margin: 0;
-  }
 
   .barnd {
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 102px;
+    position: absolute;
+    top: 103px;
     left: 229px;
 
     .name {
@@ -118,29 +98,35 @@ const Container = styled.div<{ bgCard: string }>`
   }
 
   .temperature {
+    position: absolute;
     top: 177px;
-    left: 37px;
+    left: 42px;
     width: 131px;
     text-align: right;
   }
 
   .beans {
-    top: 172px;
-    right: 36px;
+    position: absolute;
+    top: 177px;
+    right: 42px;
     width: 133px;
     text-align: left;
   }
 
-  .coffee {
-    bottom: 41px;
-    left: 141px;
-    width: 121px;
+  .coffeetype {
+    width: 150px;
+    position: absolute;
+    bottom: 47px;
+    left: 134px;
+    width: 102px;
   }
 
-  .bottle {
-    bottom: 54px;
-    right: 113px;
-    width: 114px;
+  .syrup {
+    width: 150px;
+    position: absolute;
+    bottom: 47px;
+    right: 134px;
+    width: 102px;
   }
 
   .name {
@@ -153,45 +139,55 @@ const Container = styled.div<{ bgCard: string }>`
   }
 `;
 
-const Header = styled.header<{ width: number }>`
-  .hide {
-    position: absolute;
-    opacity: 0;
-    z-index: -100;
-  }
+const InputTitle = styled.input`
+  width: 55%;
+  margin-top: 50px;
+  color: #5a2b81;
+  outline: 0;
+  border: 0;
+  background: 0;
+  background: linear-gradient(to top, #f5f2c2 50%, transparent 50%);
 
-  input {
-    width: ${(props) => props.width}px;
-    margin-top: 50px;
+  ${fonts.Hero3}
+  ::placeholder {
     color: #5a2b81;
-    outline: 0;
-    border: 0;
-    background: 0;
-    background: linear-gradient(to top, #f5f2c2 50%, transparent 50%);
-
-    ${fonts.Hero3}
-    ::placeholder {
-      color: #5a2b81;
-    }
   }
 `;
 
-const Dirgram = styled.figure<{ bgDigram: string }>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 210px;
-  height: 190px;
+const Dirgram = styled.figure`
+  width: 200px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-image: ${(props) => `url(${props.bgDigram})`};
-  background-size: contain;
-  background-repeat: no-repeat;
 
-  .digram-thumbnail {
-    width: 90px;
-    margin-top: 10px;
+  img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+  }
+
+  figure {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+  }
+
+  .brand-thumbnail {
+    top: 27%;
+    left: 27%;
+    z-index: 100;
+    width: 85px;
+  }
+
+  .temperature-thumbnail {
+    top: 36%;
+    left: 17%;
+    width: 42px;
+  }
+
+  .coffeetype-thumbnail {
+    top: 66%;
+    left: 29%;
+    width: 37px;
   }
 `;
