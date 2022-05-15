@@ -6,7 +6,7 @@ import { ChartProps } from '../../types/chart.type';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const Doghnut = ({ labels, datasets }: ChartProps) => {
+export const Doghnut = ({ labels, datasets, styles, options }: ChartProps) => {
   const data = {
     labels: labels,
     datasets: [
@@ -23,37 +23,7 @@ export const Doghnut = ({ labels, datasets }: ChartProps) => {
 
   return (
     <>
-      <Doughnut
-        data={data}
-        style={{ width: 430, height: 400 }}
-        options={{
-          maintainAspectRatio: false,
-          layout: {
-            padding: {
-              top: 0,
-              right: 10,
-              bottom: 0,
-              left: 10,
-            },
-          },
-          plugins: {
-            legend: {
-              display: true,
-              align: 'center',
-              position: 'right',
-              labels: {
-                boxWidth: 10,
-                font: {
-                  size: 12,
-                  family: 'Noto Sans CJK KR',
-                  lineHeight: 14,
-                  weight: 'bold',
-                },
-              },
-            },
-          },
-        }}
-      />
+      <Doughnut data={data} style={styles} options={options} />
     </>
   );
 };
