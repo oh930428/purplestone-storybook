@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
 import { colors, fonts } from '../../../styles';
-import { MakeMyCardProps } from '../../../types/MakeMyCard.type';
+import { MakeMyCardProps } from '../../../types/makeMyCard.type';
 
 const MakeMyCard = ({
   bgCard,
