@@ -15,29 +15,31 @@ const MakeMyCard = ({
 }: MakeMyCardProps) => {
   const [content, setContent] = useState<string>('');
   const [width, setWidth] = useState<number>(0);
-  const text = useRef<HTMLElement>(null);
+  const span = useRef<HTMLSpanElement>(null);
 
-  // TODO: input auto width 수정 필요
   useEffect(() => {
-    text.current && setWidth(text.current.offsetWidth + 100);
-    text.current && console.log(text.current.offsetWidth);
+    if (!content) {
+      setContent('이름을 입력하세요');
+    }
+
+    span.current && setWidth(span.current.offsetWidth);
   }, [content]);
 
-  const changeHandler = (e: any) => {
-    setContent(e.target.value);
+  const changeHandler = (e: { currentTarget: HTMLInputElement }) => {
+    setContent(e.currentTarget.value);
   };
 
   return (
     <Container bgCard={bgCard}>
       <Header width={width}>
-        <span className="hide" ref={text}>
+        <span className="hide" ref={span}>
           {content}
         </span>
         <input
           type="text"
+          placeholder={content}
           autoFocus
           onChange={changeHandler}
-          placeholder="이름을 입력하세요"
         />
       </Header>
 
@@ -156,6 +158,7 @@ const Container = styled.div<{ bgCard: string }>`
 
 const Header = styled.header<{ width: number }>`
   .hide {
+    ${fonts.Hero3}
     position: absolute;
     opacity: 0;
     z-index: -100;
@@ -173,6 +176,7 @@ const Header = styled.header<{ width: number }>`
     ${fonts.Hero3}
     ::placeholder {
       color: ${colors.Primary_01};
+      opacity: 0.7;
     }
   }
 `;
