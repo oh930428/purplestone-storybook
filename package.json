@@ -31,7 +31,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "heroku-postbuild": "react-scripts build"
+    "build-storybook": "build-storybook -s public",
+    "heroku-postbuild": "npm run build-storybook"
   },
   "eslintConfig": {
     "extends": [
