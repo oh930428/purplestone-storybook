@@ -11,6 +11,9 @@ module.exports = {
     '@storybook/preset-create-react-app',
   ],
   framework: '@storybook/react',
+  features: {
+    previewMdx2: true,
+  },
   core: {
     builder: '@storybook/builder-webpack5',
   },
